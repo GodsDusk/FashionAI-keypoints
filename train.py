@@ -45,7 +45,7 @@ def train(nstack, save_name='hg'):
     update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
     with tf.control_dependencies(update_ops):
         # optimizer = tf.train.MomentumOptimizer(1e-3, 0.9).minimize(c_loss)
-        optimizer = tf.train.AdamOptimizer(1e-5).minimize(c_loss)
+        optimizer = tf.train.AdamOptimizer(1e-3).minimize(c_loss)
 
 
     saver = tf.train.Saver(max_to_keep=2)        
